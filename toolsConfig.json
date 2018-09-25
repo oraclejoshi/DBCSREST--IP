@@ -1,0 +1,33 @@
+
+{
+    "apiName":"DBCSRest",
+    "apiVersion":"1.0",
+    "apiId":"1260778d-1ecf-4537-b805-92934ca8815c",
+    "baseUrl":"https://A17B6E4EF2E649709D252AF96501E5EB.mobile.ocp.oraclecloud.com:443",
+    "tokenEndpoint":"https://idcs-e3a7b9d7fa4444d3b1b89f29827ec59a.identity.oraclecloud.com/oauth2/v1/token",
+    "backend":{
+        "backendId":"<YOUR_BACKEND_ID>",
+        "backendName":"<YOUR_BACKEND_NAME>",
+        "backendVersion":"<YOUR_BACKEND_VERSION>",
+        "authorization":{
+            "anonymousKey":"<BACKEND_ANONYMOUS_KEY>",
+            "clientId":"<BACKEND_CLIENT_ID>",
+            "clientSecret":"<BACKEND_CLIENT_SECRET>"
+        }
+    },
+    "tools":{
+        "deployment":{
+            "tempDirectory":"c:\\tmp\\mcs-deploy"
+        },
+        "authorization":{
+            "clientId":"<OMCE_TM_APP_CLIENT_ID>",
+            "clientSecret":"<OMCE_TM_APP_CLIENT_SECRET>"
+        }
+    },
+    "container":{
+        "oracleMobileApiName":"OracleMobileAPI",
+        "port":4000
+    },
+    "tests":{
+    }
+}

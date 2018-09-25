@@ -1,0 +1,88 @@
+#%RAML 0.8
+title: DBCSRest
+version: 1.0
+baseUri: /mobile/custom/DBCSRest
+protocols: [HTTPS]
+/createService:
+  displayName: createService
+  description: |
+    create DB
+    
+  post:
+    protocols: [HTTPS]
+    queryParameters:
+      serviceName:
+        displayName: serviceName
+        type: string
+        required: true
+/stopStartService:
+  displayName: stopStartService
+  post:
+    protocols: [HTTPS]
+    queryParameters:
+      serviceName:
+        displayName: serviceName
+        type: string
+        required: true
+      operationName:
+        displayName: operationName
+        type: string
+        required: true
+/getContainers:
+  displayName: get storage containers
+  get:
+    protocols: [HTTPS]
+/createStorage:
+  displayName: createStorage
+  put:
+    protocols: [HTTPS]
+    queryParameters:
+      storageName:
+        displayName: storageName
+        type: string
+        required: true
+/backups:
+  displayName: backups
+  description: |
+    backups database
+    
+  post:
+    protocols: [HTTPS]
+    queryParameters:
+      serviceName:
+        displayName: serviceName
+        type: string
+        required: true
+  get:
+    protocols: [HTTPS]
+    queryParameters:
+      serviceName:
+        displayName: serviceName
+        type: string
+        required: true
+  /recovery:
+    displayName: recovery
+    description: |
+      recovery
+      
+    post:
+      queryParameters:
+        serviceName:
+          displayName: serviceName
+          type: string
+        tag:
+          displayName: backup tag
+          type: string
+          required: true
+/refresh:
+  displayName: refresh
+  description: |
+    Refresh
+    
+  post:
+    protocols: [HTTPS]
+    queryParameters:
+      serviceName:
+        displayName: serviceName
+        type: string
+        required: true
